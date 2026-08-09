@@ -1,22 +1,26 @@
+import styles from "./Details.module.css";
+
 export default function Details({ timeData }) {
   return (
-    <ul>
-      <li>
-        <p className="label">Current timezone</p>
-        <p className="value">{timeData.timezone}</p>
-      </li>
-      <li>
-        <p className="label">Day of the year</p>
-        <p className="value">{timeData.day_of_year}</p>
-      </li>
-      <li>
-        <p className="label">Day of the week</p>
-        <p className="value">{timeData.day_of_week}</p>
-      </li>
-      <li>
-        <p className="label">Week number</p>
-        <p className="value">{timeData.week_number}</p>
-      </li>
-    </ul>
+    <div className={styles.detailsContainer}>
+      <ul className={styles.detailsList}>
+        <li className={styles.detailsListItem}>
+          <p className={styles.detailsItemLabel}>Current timezone</p>
+          <p className={styles.detailsItemValue}>{timeData.timezone}</p>
+        </li>
+        <li className={styles.detailsListItem}>
+          <p className={styles.detailsItemLabel}>Day of the year</p>
+          <p className={styles.detailsItemValue}>{timeData.day_of_year}</p>
+        </li>
+        <li className={styles.detailsListItem}>
+          <p className={styles.detailsItemLabel}>Day of the week</p>
+          <p className={styles.detailsItemValue}>{timeData.day_of_week + 1}</p>
+        </li>
+        <li className={styles.detailsListItem}>
+          <p className={styles.detailsItemLabel}>Week number</p>
+          <p className={styles.detailsItemValue}>{timeData.week_number}</p>
+        </li>
+      </ul>
+    </div>
   );
 }

@@ -1,0 +1,36 @@
+.detailsContainer {
+  background-color: var(--colors-neutral-500);
+  display: flex;
+  padding: 3rem 1rem;
+  place-content: center;
+}
+
+.detailsList {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.675rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detailsListItem {
+  align-items: center;
+  color: var(--colors-neutral-800);
+  display: flex;
+  justify-content: space-between;
+}
+
+.detailsItemLabel {
+  font-size: 0.675rem;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.detailsItemValue {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}

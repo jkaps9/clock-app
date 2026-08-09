@@ -4,7 +4,6 @@
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem 1rem;
 }
 
 .mainContent {
@@ -14,6 +13,7 @@
   flex: 1;
   flex-direction: column;
   gap: clamp(4rem, 3.0458rem + 4.0712vw, 5rem);
+  padding: 2rem 1rem;
 }
 
 .timeData {
