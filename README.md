@@ -73,6 +73,7 @@ Users should be able to:
 ### Resources
 
 - [World Time API by Time.Now](https://time.now)
+- [Free IP API](https://freeipapi.com/)
 
 ### Built with
 
