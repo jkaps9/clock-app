@@ -32,7 +32,7 @@ export default function App() {
         isExpanded={isDetailsVisible}
         setIsExpanded={() => setIsDetailsVisible((prev) => !prev)}
       ></Button>
-      {!isDetailsVisible && <Details></Details>}
+      {!isDetailsVisible && <Details timeData={timeData}></Details>}
     </>
   );
 }
