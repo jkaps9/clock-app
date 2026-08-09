@@ -1,4 +1,5 @@
 .main {
+  align-self: stretch;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -7,8 +8,20 @@
 }
 
 .mainContent {
+  align-self: stretch;
   align-items: flex-start;
   display: flex;
+  flex: 1;
   flex-direction: column;
-  gap: 5rem;
+  gap: clamp(4rem, 3.0458rem + 4.0712vw, 5rem);
+}
+
+.timeData {
+  align-self: stretch;
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1.5rem;
 }
