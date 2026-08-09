@@ -1,7 +1,8 @@
 .detailsContainer {
   background-color: var(--colors-neutral-500);
   display: flex;
-  padding: 3rem 1rem;
+  padding: clamp(3rem, 2.2958rem + 3.0047vw, 5rem)
+    clamp(1rem, -0.4085rem + 6.0094vw, 5rem);
   place-content: center;
 }
 
@@ -23,14 +24,28 @@
 }
 
 .detailsItemLabel {
-  font-size: 0.675rem;
+  font-size: clamp(0.625rem, 0.493rem + 0.5634vw, 1rem);
   letter-spacing: 2px;
   line-height: 1.5;
   text-transform: uppercase;
 }
 
 .detailsItemValue {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 0.4577rem + 3.3803vw, 3.5rem);
   font-weight: 700;
   line-height: 1.2;
+}
+
+@media (min-width: 48rem) {
+  .detailsList {
+    column-gap: clamp(2.5rem, -0.3571rem + 5.9524vw, 5rem);
+    display: grid;
+    row-gap: 2.5rem;
+    grid-template-columns: auto 1fr;
+  }
+  .detailsListItem {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 }
