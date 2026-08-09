@@ -3,7 +3,7 @@
   background-color: var(--color-bg-surface);
   border: none;
   border-radius: var(--radius-full);
-  color: inherit;
+  color: var(--colors-neutral-500);
   display: inline-flex;
   font-family: var(--font-body);
   font-size: 1rem;
