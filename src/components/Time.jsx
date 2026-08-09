@@ -3,30 +3,16 @@ export default function Clock({ timeData, error, loading }) {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
-      <h3>Your IP-Based Time Info</h3>
+    <div>
       <p>
-        <strong>Current Time:</strong>
-        {new Date(timeData.datetime).toLocaleString()}
+        {new Date(timeData.datetime).toLocaleTimeString([], {
+          hour12: false,
+          hour: "2-digit",
+          minute: "2-digit",
+        })}{" "}
+        {timeData.abbreviation}
       </p>
-      <p>
-        <strong>Timezone:</strong> {timeData.timezone}
-      </p>
-      <p>
-        <strong>Unix Time:</strong> {timeData.unixtime}
-      </p>
-      <p>
-        <strong>abbreviation:</strong> {timeData.abbreviation}
-      </p>
-      <p>
-        <strong>DST:</strong> {timeData.dst ? "true" : "false"}
-      </p>
-      <p>
-        <strong>DST Offset:</strong> {timeData.dst_offset}
-      </p>
-      <p>
-        <strong>IP:</strong> {timeData.client_ip}
-      </p>
+      <p></p>
     </div>
   );
 }
