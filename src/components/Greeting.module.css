@@ -1,0 +1,19 @@
+.greetingRow {
+  align-items: center;
+  display: flex;
+  font-size: 1.25rem;
+  line-height: 1.1;
+  gap: 1rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.expandedGreeting {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .expandedGreeting {
+    display: unset;
+  }
+}
