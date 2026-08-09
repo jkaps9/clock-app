@@ -26,7 +26,7 @@ export default function Location() {
   return (
     <>
       <p>
-        {locationData.cityName}, {locationData.countryName}
+        {locationData.cityName}, {locationData.regionName}
       </p>
     </>
   );
