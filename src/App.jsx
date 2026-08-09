@@ -1,14 +1,14 @@
 import Button from "./components/Button";
-import Clock from "./components/Clock";
-import CityState from "./components/CityState";
+import Time from "./components/Time";
+import Location from "./components/Location";
 import Quote from "./components/Quote";
 
 export default function App() {
   return (
     <>
       <Quote></Quote>
-      {/* <Clock></Clock> */}
-      {/* <CityState></CityState> */}
+      <Time></Time>
+      <Location></Location>
       <Button></Button>
     </>
   );
