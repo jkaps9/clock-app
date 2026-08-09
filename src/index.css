@@ -180,22 +180,3 @@ p {
 /*~ ~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~>
 <~~         Utilities          ~~>
 <~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~ ~*/
-
-.icon-circle {
-  align-items: center;
-  background-color: var(--colors-neutral-800);
-  border-radius: var(--radius-full);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 2.5rem;
-  min-width: 2.5rem;
-}
-
-button:hover > .icon-circle {
-  background-color: var(--colors-neutral-500);
-}
-
-button:active > .icon-circle {
-  background-color: var(--colors-neutral-800);
-}
