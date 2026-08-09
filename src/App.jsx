@@ -19,20 +19,24 @@ export default function App() {
   } = useLocationUrl();
 
   return (
-    <>
-      {!isDetailsVisible && <Quote></Quote>}
-      <Greeting timeHour={11}></Greeting>
-      <Time timeData={timeData} error={error} loading={loading}></Time>
-      <Location
-        locationData={locationData}
-        error={locationError}
-        loading={locationLoading}
-      ></Location>
-      <Button
-        isExpanded={isDetailsVisible}
-        setIsExpanded={() => setIsDetailsVisible((prev) => !prev)}
-      ></Button>
-      {isDetailsVisible && <Details timeData={timeData}></Details>}
-    </>
+    <main>
+      <section id="quote">{!isDetailsVisible && <Quote></Quote>}</section>
+      <section id="main-content">
+        <Greeting timeHour={11}></Greeting>
+        <Time timeData={timeData} error={error} loading={loading}></Time>
+        <Location
+          locationData={locationData}
+          error={locationError}
+          loading={locationLoading}
+        ></Location>
+        <Button
+          isExpanded={isDetailsVisible}
+          setIsExpanded={() => setIsDetailsVisible((prev) => !prev)}
+        ></Button>
+      </section>
+      <section id="details">
+        {isDetailsVisible && <Details timeData={timeData}></Details>}
+      </section>
+    </main>
   );
 }
