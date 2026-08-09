@@ -1,8 +1,4 @@
-import { useTimeUrl } from "../hooks/useTimeUrl";
-
-export default function Clock() {
-  const { timeData, error, loading } = useTimeUrl();
-
+export default function Clock({ timeData, error, loading }) {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
