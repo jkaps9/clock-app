@@ -1,12 +1,12 @@
 .timeText {
-  font-size: clamp(6.25rem, 0.2863rem + 25.4453vw, 12.5rem);
+  font-size: clamp(6.25rem, 4.0493rem + 9.3897vw, 12.5rem);
   font-weight: 700;
   letter-spacing: -2.5px;
   line-height: 0.73;
 }
 
 .timeZoneText {
-  font-size: clamp(1.25rem, 0.0573rem + 5.0891vw, 2.5rem);
+  font-size: clamp(1.25rem, 0.8099rem + 1.8779vw, 2.5rem);
   font-weight: 300;
   letter-spacing: normal;
   text-transform: uppercase;

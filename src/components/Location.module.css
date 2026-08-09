@@ -1,5 +1,5 @@
 .locationText {
-  font-size: 1rem;
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
   font-weight: 700;
   letter-spacing: 3px;
   line-height: 1.1;
