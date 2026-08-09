@@ -23,7 +23,7 @@ export default function Clock() {
       });
   }, []);
 
-  if (loading) return <p>Loading local time...</p>;
+  if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
   return (
