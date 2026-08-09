@@ -3,7 +3,7 @@
   background-color: var(--color-bg-surface);
   border: none;
   border-radius: var(--radius-full);
-  color: var(--colors-neutral-500);
+  color: var(--color-bg);
   display: inline-flex;
   font-family: var(--font-body);
   font-size: 1rem;
@@ -15,6 +15,7 @@
   text-transform: uppercase;
 
   &:hover {
+    color: var(--colors-neutral-500);
     cursor: pointer;
   }
 
@@ -23,6 +24,7 @@
     box-shadow:
       0 0 0 3px var(--colors-neutral-900),
       0 0 0 5px var(--colors-neutral-0);
+    color: var(--color-bg);
   }
 }
 
