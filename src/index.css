@@ -179,6 +179,9 @@ p {
 }
 
 #root {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
   min-height: 100svh;
 }
 /*~ ~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~>

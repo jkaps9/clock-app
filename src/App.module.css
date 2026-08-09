@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}
+
+.mainContent {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
