@@ -69,7 +69,7 @@
   --color-bg: var(--colors-neutral-900);
 
   --color-text-header: var(--colors-neutral-0);
-  --color-text-body: var(--colors-neutral-0);
+  --color-text-body: var(--colors-neutral-500);
 
   --color-border: var(--colors-neutral-900);
   --color-bg-surface: var(--colors-neutral-0);
@@ -190,4 +190,12 @@ p {
   justify-content: center;
   min-height: 2.5rem;
   min-width: 2.5rem;
+}
+
+button:hover > .icon-circle {
+  background-color: var(--colors-neutral-500);
+}
+
+button:active > .icon-circle {
+  background-color: var(--colors-neutral-800);
 }

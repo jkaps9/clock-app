@@ -1,9 +1,27 @@
 .btn {
   align-items: center;
   background-color: var(--color-bg-surface);
+  border: none;
   border-radius: var(--radius-full);
+  color: inherit;
   display: inline-flex;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
   gap: 0.75rem;
+  letter-spacing: 5px;
+  line-height: 1.4;
   padding: 0.5rem 0.5rem 0.5rem 1.25rem;
   text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus-visible,
+  &:active {
+    box-shadow:
+      0 0 0 3px var(--colors-neutral-900),
+      0 0 0 5px var(--colors-neutral-0);
+  }
 }
