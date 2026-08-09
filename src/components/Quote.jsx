@@ -1,4 +1,5 @@
 import { useQuoteURL } from "../hooks/useQuoteUrl";
+import styles from "./Quote.module.css";
 
 export default function Quote() {
   const { quoteData, error, loading } = useQuoteURL();
@@ -7,9 +8,9 @@ export default function Quote() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <>
-      <p>{quoteData.content}</p>
-      <p>{quoteData.author}</p>
-    </>
+    <div className={styles.quoteContainer}>
+      <p className={styles.quoteContent}>{quoteData.content}</p>
+      <p className={styles.quoteAuthor}>{quoteData.author}</p>
+    </div>
   );
 }
