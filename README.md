@@ -72,8 +72,9 @@ Users should be able to:
 
 ### Resources
 
-- [World Time API by Time.Now](https://time.now)
-- [Free IP API](https://freeipapi.com/)
+- [World Time API by Time.Now](https://time.now) to set the time based on the visitor's IP adress. This API will also be used for additional data, like the day of the year shown in the expanded state.
+- [Free IP API](https://freeipapi.com/) to set the city and country underneath the time
+- [Programming Quotes API](https://github.com/lukePeavey/quotable) to generate random programming quotes.
 
 ### Built with
 
