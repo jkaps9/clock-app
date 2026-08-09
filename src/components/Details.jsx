@@ -6,7 +6,9 @@ export default function Details({ timeData }) {
       <ul className={styles.detailsList}>
         <li className={styles.detailsListItem}>
           <p className={styles.detailsItemLabel}>Current timezone</p>
-          <p className={styles.detailsItemValue}>{timeData.timezone}</p>
+          <p className={styles.detailsItemValue}>
+            {timeData.timezone.replace("_", " ")}
+          </p>
         </li>
         <li className={styles.detailsListItem}>
           <p className={styles.detailsItemLabel}>Day of the year</p>
