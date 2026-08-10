@@ -30,19 +30,21 @@ export default function App() {
       <main className={styles.main}>
         <section id="quote" className={styles.quoteSection}>
           {!isDetailsVisible && (
-            <Quote
-              quoteData={quoteData}
-              loading={quoteLoading}
-              error={quoteError}
-            ></Quote>
+            <>
+              <Quote
+                quoteData={quoteData}
+                loading={quoteLoading}
+                error={quoteError}
+              ></Quote>
+              <button
+                onClick={refreshQuote}
+                className={styles.refreshButton}
+                aria-label="Refresh quote"
+              >
+                <img src={RefreshIcon} alt="" aria-hidden="true" />
+              </button>
+            </>
           )}
-          <button
-            onClick={refreshQuote}
-            className={styles.refreshButton}
-            aria-label="Refresh quote"
-          >
-            <img src={RefreshIcon} alt="" aria-hidden="true" />
-          </button>
         </section>
         <section id="main-content" className={styles.mainContent}>
           <div className={styles.timeData}>
