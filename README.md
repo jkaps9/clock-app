@@ -59,9 +59,7 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="./study-mode.png" alt="screenshot" width="500"/>
-<img src="./study-mode-answer.png" alt="screenshot" width="500"/>
-<img src="./all-cards.png" alt="screenshot" width="500"/>
+<img src="./screenshot.png" alt="screenshot" width="500"/>
 
 ### Links
 
@@ -86,5 +84,4 @@ Users should be able to:
 
 ## Author
 
-- Website - [Josh](https://www.joshfkaplan.com)
 - Frontend Mentor - [@jkaps9](https://www.frontendmentor.io/profile/jkaps9)
