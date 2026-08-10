@@ -11,6 +11,7 @@ import Details from "./components/Details";
 import Greeting from "./components/Greeting";
 import BackgroundImage from "./components/BackgroundImage";
 import RefreshIcon from "./assets/icons/icon-refresh.svg";
+import ErrorBoundary from "./components/ErrorBoundary.jsx";
 import styles from "./App.module.css";
 
 export default function App() {
@@ -31,18 +32,20 @@ export default function App() {
         <section id="quote" className={styles.quoteSection}>
           {!isDetailsVisible && (
             <>
-              <Quote
-                quoteData={quoteData}
-                loading={quoteLoading}
-                error={quoteError}
-              ></Quote>
-              <button
-                onClick={refreshQuote}
-                className={styles.refreshButton}
-                aria-label="Refresh quote"
-              >
-                <img src={RefreshIcon} alt="" aria-hidden="true" />
-              </button>
+              <ErrorBoundary fallback={<p>Something went wrong</p>}>
+                <Quote
+                  quoteData={quoteData}
+                  loading={quoteLoading}
+                  error={quoteError}
+                ></Quote>
+                <button
+                  onClick={refreshQuote}
+                  className={styles.refreshButton}
+                  aria-label="Refresh quote"
+                >
+                  <img src={RefreshIcon} alt="" aria-hidden="true" />
+                </button>
+              </ErrorBoundary>
             </>
           )}
         </section>
