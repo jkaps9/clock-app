@@ -62,7 +62,13 @@ export default function App() {
           ></Button>
         </section>
         <section id="details">
-          {isDetailsVisible && <Details timeData={timeData}></Details>}
+          {isDetailsVisible && (
+            <Details
+              timeData={timeData}
+              error={error}
+              loading={loading}
+            ></Details>
+          )}
         </section>
       </main>
     </>

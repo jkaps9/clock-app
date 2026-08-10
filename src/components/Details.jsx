@@ -1,6 +1,9 @@
 import styles from "./Details.module.css";
 
-export default function Details({ timeData }) {
+export default function Details({ timeData, loading, error }) {
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
+
   return (
     <div className={styles.detailsContainer}>
       <ul className={styles.detailsList}>
