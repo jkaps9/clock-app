@@ -9,6 +9,7 @@ import NighttimeMobileBG from "../assets/images/mobile/bg-image-nighttime.jpg";
 export default function BackgroundImage({ timeHour }) {
   return (
     <>
+      <div className={styles.overlay}></div>
       {timeHour < 17 ? (
         <picture>
           <source media="(min-width:1024px)" srcset={DaytimeDesktopBG} />
