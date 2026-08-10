@@ -10,6 +10,7 @@ import Quote from "./components/Quote";
 import Details from "./components/Details";
 import Greeting from "./components/Greeting";
 import BackgroundImage from "./components/BackgroundImage";
+import RefreshIcon from "./assets/icons/icon-refresh.svg";
 import styles from "./App.module.css";
 
 export default function App() {
@@ -27,16 +28,20 @@ export default function App() {
     <>
       <BackgroundImage></BackgroundImage>
       <main className={styles.main}>
-        <section id="quote">
+        <section id="quote" className={styles.quoteSection}>
           {!isDetailsVisible && (
             <Quote
               quoteData={quoteData}
               loading={quoteLoading}
               error={quoteError}
             ></Quote>
-          )}{" "}
-          <button onClick={refreshQuote}>
-            <span className="sr-only">Refresh</span>
+          )}
+          <button
+            onClick={refreshQuote}
+            className={styles.refreshButton}
+            aria-label="Refresh quote"
+          >
+            <img src={RefreshIcon} alt="" aria-hidden="true" />
           </button>
         </section>
         <section id="main-content" className={styles.mainContent}>
