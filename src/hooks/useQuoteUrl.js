@@ -1,11 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const useQuoteURL = () => {
+  // loading starts as true, so we don't need to set it to true again on mount
   const [quoteData, setQuoteData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  const fetchQuote = useCallback(() => {
     fetch("https://api.quotable.io/random")
       .then((response) => {
         if (response.status >= 400) {
@@ -21,7 +22,18 @@ const useQuoteURL = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  return { quoteData, error, loading };
+  const refreshQuote = useCallback(() => {
+    setLoading(true);
+    setError(null);
+    fetchQuote();
+  }, [fetchQuote]);
+
+  useEffect(() => {
+    fetchQuote();
+  }, [fetchQuote]);
+
+  // 4. Export refreshQuote for the button
+  return { quoteData, error, loading, refreshQuote };
 };
 
 export { useQuoteURL };
