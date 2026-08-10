@@ -12,8 +12,8 @@ export default function BackgroundImage({ timeHour }) {
       <div className={styles.overlay}></div>
       {timeHour < 17 ? (
         <picture>
-          <source media="(min-width:1024px)" srcset={DaytimeDesktopBG} />
-          <source media="(min-width:768px)" srcset={DaytimeTabletBG} />
+          <source media="(min-width:1024px)" srcSet={DaytimeDesktopBG} />
+          <source media="(min-width:768px)" srcSet={DaytimeTabletBG} />
           <img
             src={DaytimeMobileBG}
             alt=""
@@ -23,8 +23,8 @@ export default function BackgroundImage({ timeHour }) {
         </picture>
       ) : (
         <picture>
-          <source media="(min-width:1024px)" srcset={NighttimeDesktopBG} />
-          <source media="(min-width:768px)" srcset={NighttimeTabletBG} />
+          <source media="(min-width:1024px)" srcSet={NighttimeDesktopBG} />
+          <source media="(min-width:768px)" srcSet={NighttimeTabletBG} />
           <img
             src={NighttimeMobileBG}
             alt=""

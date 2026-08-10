@@ -10,7 +10,6 @@ const useQuoteURL = () => {
     fetch("https://api.quotable.io/random")
       .then((response) => {
         if (response.status >= 400) {
-          console.log("SERVER ERRRORRRR");
           throw new Error("server error");
         }
         return response.json();

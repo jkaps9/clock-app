@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <>
-      <BackgroundImage></BackgroundImage>
+      <BackgroundImage timeHour={11}></BackgroundImage>
       <main className={styles.main}>
         <section id="quote" className={styles.quoteSection}>
           {!isDetailsVisible && (
