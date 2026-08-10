@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTimeUrl } from "./hooks/useTimeUrl";
 import { useLocationUrl } from "./hooks/useLocationUrl";
+import { useQuoteURL } from "./hooks/useQuoteUrl";
 
 import Button from "./components/Button";
 import Time from "./components/Time";
@@ -20,11 +21,24 @@ export default function App() {
     loading: locationLoading,
   } = useLocationUrl();
 
+  const { quoteData, quoteError, quoteLoading, refreshQuote } = useQuoteURL();
+
   return (
     <>
       <BackgroundImage></BackgroundImage>
       <main className={styles.main}>
-        <section id="quote">{!isDetailsVisible && <Quote></Quote>}</section>
+        <section id="quote">
+          {!isDetailsVisible && (
+            <Quote
+              quoteData={quoteData}
+              loading={quoteLoading}
+              error={quoteError}
+            ></Quote>
+          )}{" "}
+          <button onClick={refreshQuote}>
+            <span className="sr-only">Refresh</span>
+          </button>
+        </section>
         <section id="main-content" className={styles.mainContent}>
           <div className={styles.timeData}>
             <Greeting timeHour={11}></Greeting>
