@@ -63,8 +63,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/jkaps9/flashcard-app](https://github.com/jkaps9/flashcard-app)
-- Live Site URL: [https://jkaps9.github.io/flashcard-app/](https://jkaps9.github.io/flashcard-app/)
+- Solution URL: [https://github.com/jkaps9/clock-app](https://github.com/jkaps9/clock-app)
+- Live Site URL: [https://jkaps9.github.io/clock-app/](https://jkaps9.github.io/clock-app/)
 
 ## My process
 
