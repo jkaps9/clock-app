@@ -8,16 +8,16 @@ export default function Button({ isExpanded, setIsExpanded }) {
       {isExpanded ? (
         <>
           <span>Less</span>
-          <div className={styles.iconCircle}>
+          <span className={styles.iconCircle}>
             <img src={LessIcon} alt="" aria-hidden="true" />
-          </div>
+          </span>
         </>
       ) : (
         <>
           <span>More</span>
-          <div className={styles.iconCircle}>
+          <span className={styles.iconCircle}>
             <img src={MoreIcon} alt="" aria-hidden="true" />
-          </div>
+          </span>
         </>
       )}
     </button>

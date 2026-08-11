@@ -40,6 +40,7 @@ export default function App() {
                 onClick={refreshQuote}
                 className={styles.refreshButton}
                 aria-label="Refresh quote"
+                type="button"
               >
                 <img src={RefreshIcon} alt="" aria-hidden="true" />
               </button>
