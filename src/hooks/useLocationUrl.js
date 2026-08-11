@@ -16,7 +16,7 @@ const useLocationUrl = () => {
       .then((data) => {
         setLocationData(data);
       })
-      .catch((error) => setError(error))
+      .catch((err) => setError(err))
       .finally(() => setLoading(false));
   }, []);
 

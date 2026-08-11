@@ -17,7 +17,7 @@ const useQuoteURL = () => {
       .then((data) => {
         setQuoteData(data);
       })
-      .catch((error) => setError(error))
+      .catch((err) => setError(err))
       .finally(() => setLoading(false));
   }, []);
 
