@@ -6,8 +6,8 @@ export default function Quote({ quoteData, loading, error }) {
 
   return (
     <div className={styles.quoteContainer}>
-      <p className={styles.quoteContent}>{quoteData.content}</p>
-      <p className={styles.quoteAuthor}>{quoteData.author}</p>
+      <p className={styles.quoteContent}>{quoteData?.content}</p>
+      <p className={styles.quoteAuthor}>{quoteData?.author}</p>
     </div>
   );
 }
