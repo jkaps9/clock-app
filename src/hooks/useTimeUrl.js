@@ -6,21 +6,27 @@ const useTimeUrl = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://time.now/developer/api/ip")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setTimeData(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setLoading(false);
-      });
+    const fetchData = async () => {
+      fetch("https://time.now/developer/api/ip")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setTimeData(data);
+          setLoading(false);
+        })
+        .catch((err) => {
+          setError(err.message);
+          setLoading(false);
+        });
+    };
+    fetchData();
+
+    const intervalId = setInterval(fetchData, 60000);
+    return () => clearInterval(intervalId);
   }, []);
   return { timeData, error, loading };
 };
